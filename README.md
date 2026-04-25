@@ -21,7 +21,8 @@
 ```bash
 git clone https://github.com/difyz9/ytb2bili-docker.git
 cd ytb2bili-docker
-cp config.toml.example config.toml
+docker compose up -d 
+
 ```
 
 ### 3. 使用最小配置启动
@@ -51,14 +52,12 @@ table_prefix = ""
 download_dir = "./downloads"
 ytdlp_path = "/usr/local/bin/yt-dlp"
 ffmpeg_path = "/usr/bin/ffmpeg"
+
+# 如果你的网络访问 YouTube 需要代理，再补：
+# proxy_url = "http://127.0.0.1:7890"
+
 ```
 
-如果你的网络访问 YouTube 需要代理，再补：
-
-```toml
-[workflow]
-proxy_url = "http://127.0.0.1:7890"
-```
 
 ### 4. 启动服务
 
